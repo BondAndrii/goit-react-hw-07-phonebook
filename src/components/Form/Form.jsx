@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import { addContact } from "redux/contacts/slice";
+// import { addContact } from "redux/contacts/slice";
 
 import { getContacts } from "redux/contacts/selectors";
 
 import { nanoid } from "nanoid";
 
 import styles from "./Form.module.css";
+import { addContact } from "redux/contacts/contactsOperations";
 
 export default function Form() {
     

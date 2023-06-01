@@ -13,12 +13,12 @@ import { deleteContact } from "redux/contacts/contactsOperations";
 const ContactList = () => {
 
     const filteredContacts = useSelector(getFilteredContacts);
-    console.log("filteredContacts", filteredContacts )
+    // console.log("filteredContacts", filteredContacts )
     const dispatch = useDispatch();
     
     return (
         <ul className={styles.ContactList}>
-            {filteredContacts.items.map((contact) => {
+            {filteredContacts.map((contact) => {
                 
                 return (
                      <li className={styles.ContactList__element} key={contact.id} id={contact.id}>

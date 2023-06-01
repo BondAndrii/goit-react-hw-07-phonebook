@@ -1,4 +1,4 @@
-export const getContacts = state => state.contacts.item;
+export const getContacts = state => state.contacts.items;
 
 export const getIsLoading = state => state.contacts.getIsLoading;
 
@@ -8,7 +8,7 @@ export const getFilteredContacts = state => {
     const { contacts, filter } = state;
     const { items } = contacts;
      if (!filter) {
-      return contacts;
+      return items;
      } else {
         const normalizedFilter = filter.toLowerCase();
         const findAbonent = items.filter(({ name, number }) => name.toLowerCase().trim().includes(normalizedFilter) || 

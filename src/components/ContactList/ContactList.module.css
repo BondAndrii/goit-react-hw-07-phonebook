@@ -1,6 +1,8 @@
 .ContactList {
-    width: 500px ;
-    /* height: 600px; */
+    width: 560px ;
+    height: 400px;
+    overflow: auto;
+    
     /* border: 1px solid red; */
 }
 .ContactList__element {

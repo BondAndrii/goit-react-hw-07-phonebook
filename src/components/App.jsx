@@ -28,12 +28,12 @@ export default function App() {
     <div className={styles.Container}>
       <header>
         <h1 className={styles.Tittle}>Записник контактів</h1>
-      </header>
-      {isLoading && <Loader/>}
+      </header>      
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>
       <Filter />      
-      <ContactList />     
+      <ContactList />   
+      {isLoading && <Loader/>}
     </div>
   );
 }

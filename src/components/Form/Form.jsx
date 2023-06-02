@@ -8,8 +8,9 @@ import { getContacts } from "redux/contacts/selectors";
 
 import { nanoid } from "nanoid";
 
-import styles from "./Form.module.css";
 import { addContact } from "redux/contacts/contactsOperations";
+
+import styles from "./Form.module.css";
 
 export default function Form() {
     

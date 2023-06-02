@@ -38,7 +38,8 @@ const contactsSlice = createSlice({
             state.items = action.payload;
         }).addCase(fetchContacts.rejected, (state, action) => {
             state.isLoading = false;
-            state.error = action.payload;
+            // state.error = action.payload;
+            state.error = "Sorry, request error. Please, check your internet connections"
         }).addCase(addContact.pending, (state, action) => {
             state.isLoading = true;
         }).addCase(addContact.fulfilled, (state, action) => {
@@ -47,7 +48,8 @@ const contactsSlice = createSlice({
             state.items.push(action.payload);
         }).addCase(addContact.rejected, (state, action) => {
             state.isLoading = false;
-            state.error = action.payload;
+            // state.error = action.payload;
+            state.error = "Sorry, request error. Please, check your internet connections"
         }).addCase(deleteContact.pending, (state, action) => {
             state.isLoading = true;
         }).addCase(deleteContact.fulfilled, (state, action) => {
@@ -59,7 +61,8 @@ const contactsSlice = createSlice({
             // state.items.filter(item => item.id !== action.payload)
         }).addCase(deleteContact.rejected, (state, action) => {
             state.isLoading = false;
-            state.error = action.payload;
+            // state.error = action.payload;
+            state.error = "Sorry, request error. Please, check your internet connections"
         } )
     // {
     //     [fetchContacts.pending](state, action) {

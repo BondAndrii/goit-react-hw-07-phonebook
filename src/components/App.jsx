@@ -35,8 +35,8 @@ export default function App() {
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>
       <Filter />
-      {isLoading && !error && <Loader/>}
-      {(error && <ErrorMessage/>) || <ContactList /> }       
+      {/* {isLoading && !error && <Loader/>} */}
+      {(isLoading && !error && <Loader/>) || (error && <ErrorMessage/>) || <ContactList /> }       
     </div>
   );
 }

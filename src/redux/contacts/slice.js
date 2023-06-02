@@ -12,7 +12,7 @@ const contactsSlice = createSlice({
         isLoading: false,
         error: null,
     },
-    reducers: {
+    // reducers: {
         // fetchingInProgress(state) {
         //     state.isLoading = true;
         // },
@@ -28,7 +28,7 @@ const contactsSlice = createSlice({
         // delContact(state, action) {
         //     return state.filter(contact => contact.id !== action.payload)
         // }
-    },
+    // },
     extraReducers: builder => 
         builder.addCase(fetchContacts.pending, (state, action) => {
             state.isLoading = true;

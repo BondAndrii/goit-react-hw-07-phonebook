@@ -4,15 +4,16 @@ import styles from "./Loader.module.css"
 
 const Loader = () => {
     return (
-        <div className={styles.Loader}>
+        <div
+            // className={styles.Loader}
+        >
             <Circles
             height="80"
             width="80"
             radius="9"
             color='green'
             ariaLabel='three-dots-loading'
-            wrapperStyle
-            // ={{ justifyContent: 'center' }}
+            wrapperStyle={{ justifyContent: 'center', alignItems: 'center'}}
             wrapperClass
             // ={styles.Loader}
         />

@@ -16,27 +16,23 @@ import Loader from "./Loader/Loader";
 
 import styles from "./App.module.css";
 
-
-
-// import { fetchContacts } from "redux/contacts/contactsOperations";
-
-
 export default function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
+ 
   useEffect(() => {
     dispatch(fetchContacts());
   },[dispatch])
-
+  console.log("isLoading", isLoading);  
   return (
     <div className={styles.Container}>
       <header>
         <h1 className={styles.Tittle}>Записник контактів</h1>
       </header>
+      {isLoading && <Loader/>}
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>
-      <Filter />
-      {isLoading && <Loader/>}
+      <Filter />      
       <ContactList />     
     </div>
   );

@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     dispatch(fetchContacts());
   },[dispatch])
-  console.log("isLoading", isLoading);  
+  
   return (
     <div className={styles.Container}>
       <header>
@@ -35,9 +35,8 @@ export default function App() {
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>
       <Filter />
-      {(error && <ErrorMessage/>) || <ContactList /> }
-      {/* <ContactList />    */}
       {isLoading && !error && <Loader/>}
+      {(error && <ErrorMessage/>) || <ContactList /> }       
     </div>
   );
 }

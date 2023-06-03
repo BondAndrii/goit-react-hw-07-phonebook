@@ -48,7 +48,7 @@ export default function Form() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("contacts in form", contacts)
+        
         if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase() || contact.number === number)) {
             const message = `Абонент ${name} чи абонент з номером ${number} вже є в книзі`;
             alert(message);  

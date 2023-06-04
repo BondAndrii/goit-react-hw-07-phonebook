@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 // import { addContact } from "redux/contacts/slice";
 
-import { getContacts } from "redux/contacts/selectors";
+import { selectContacts } from "redux/contacts/selectors";
 
 import { nanoid } from "nanoid";
 
@@ -15,7 +15,7 @@ import styles from "./Form.module.css";
 export default function Form() {
     
     const dispatch = useDispatch();
-    const contacts = useSelector(getContacts);
+    const contacts = useSelector(selectContacts);
 
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');

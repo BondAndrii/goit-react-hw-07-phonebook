@@ -1,4 +1,4 @@
-// import { useSelector } from "react-redux";
+import { createSelector } from "@reduxjs/toolkit";
 
 import { selectFilter } from "redux/filter/selectors";
 
@@ -8,20 +8,30 @@ export const selectIsLoading = state => state.contacts.isLoading;
 
 export const selectError = state => state.contacts.error;
 
-export const selectFilteredContacts = state => {
-    const itm = selectContacts(state);
-    const filtr = selectFilter(state);
-
-    // const { contacts, filter } = state;
-    // const { items } = contacts;
-     if (!filtr) {
-      return itm;
+export const selectFilteredContacts = createSelector(
+    [selectContacts, selectFilter], (item, filter) => {
+    if (!filter) {
+        return item;
      } else {
-        const normalizedFilter = filtr.toLowerCase();
-        const findAbonent = itm.filter(({ name, number }) => name.toLowerCase().trim().includes(normalizedFilter) || 
+        const normalizedFilter = filter.toLowerCase();
+        const findAbonent = item.filter(({ name, number }) => name.toLowerCase().trim().includes(normalizedFilter) || 
             number.trim().includes(normalizedFilter)); 
-        //  console.log("findAbonent", findAbonent)
          return findAbonent;
     }
-}
+    }
+)
+
+// export const selectFilteredContacts = state => {
+//     const item = selectContacts(state);
+//     const filter = selectFilter(state);
+
+    //  if (!filter) {
+    //   return item;
+    //  } else {
+    //     const normalizedFilter = filter.toLowerCase();
+    //     const findAbonent = item.filter(({ name, number }) => name.toLowerCase().trim().includes(normalizedFilter) || 
+    //         number.trim().includes(normalizedFilter)); 
+    //      return findAbonent;
+    // }
+// }
 

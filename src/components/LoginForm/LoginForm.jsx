@@ -5,7 +5,7 @@ const LoginForm = () => {
     return (
         <form>
             <label>
-                Email:
+                Emaill:
                 <input type="email" name="email"/>
             </label>
             <label>

@@ -30,7 +30,7 @@ export default function App() {
   return (
     <div className={styles.Container}>
       <header>
-        <h1 className={styles.Tittle}>Записник контактів</h1>
+        <h1 className={styles.Tittle}>Записник контакти</h1>
       </header>      
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>

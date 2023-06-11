@@ -6,6 +6,12 @@ import { fetchContacts } from "redux/contacts/contactsOperations";
 
 import { selectError, selectIsLoading } from "redux/contacts/selectors";
 
+import UserMenu from "./UserMenu/UserMenu"
+
+import RegisterForm from "./RegisterForm/RegisterForm";
+
+import LoginForm from "./LoginForm/LoginForm"
+
 import Form from "./Form/Form";
 
 import Filter from './Filter/Filter'
@@ -29,9 +35,18 @@ export default function App() {
   
   return (
     <div className={styles.Container}>
+<<<<<<< HEAD
       <header>
         <h1 className={styles.Tittle}>Записник контакти</h1>
       </header>      
+=======
+      <header>        
+        <h1 className={styles.Tittle}>Записник контактів</h1>
+        <UserMenu/>
+      </header>
+      <LoginForm/>
+      <RegisterForm/>
+>>>>>>> 30e0d480999a15db3f766c5ba3ca19c1c123e731
       <Form />      
       <h2 className={styles.SecondTittle}>Контакти</h2>
       <Filter />
